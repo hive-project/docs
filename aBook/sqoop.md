@@ -21,6 +21,7 @@ sqoop export \
   --hcatalog-table js_pianyuan_orc \
   --hcatalog-partition-keys curdate \
   --hcatalog-partition-values 20180122 \
+  --update-mode allowinsert \
   --connect jdbc:mysql://ip:3306/test \
   --username username \
   --password passwd --m 10\
