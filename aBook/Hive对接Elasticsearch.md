@@ -36,7 +36,7 @@ STORED BY 'org.elasticsearch.hadoop.hive.EsStorageHandler'
 TBLPROPERTIES('es.resource' = 'logs-footprint-mp-2020.11.24/doc',
 'es.index.auto.create' = 'true', --自动建index
 'es.index.read.missing.as.empty'='true',
-'es.nodes' = 'l-offline1.sg-zl.ops.algento.com',
+'es.nodes' = 'zhenxin.com',
 'es.port'='9200'
 );
 ```
@@ -77,14 +77,14 @@ from default.es_bigdata_test limit 100;
 
 ```
 elasticdump \
-  --input=http://xxxxx:9200/logs-mp-2020.11.24 \
+  --input=http://xxxxx:9200/logs-2020.11.24 \
   --output=/data/my_index.json \
   --type=data
   --limit=10000
  
  
 elasticdump \
-  --input=http://xxxxx:9200/logs-mp-2020.11.24 \
+  --input=http://xxxxx:9200/logs-2020.11.24 \
   --output=/data/my_index_mapping.json \
   --type=mapping
 ```
